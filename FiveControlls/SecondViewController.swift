@@ -25,11 +25,12 @@ class SecondViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let thirdViewController = storyboard.instantiateViewController(identifier: String(describing: ThirdViewController.self)) as! ThirdViewController
     
-    thirdViewController.modalPresentationStyle = .fullScreen
-    self.present(thirdViewController, animated: true)
+//    thirdViewController.modalPresentationStyle = .fullScreen
+//    self.present(thirdViewController, animated: true)
     
     thirdViewController.myText = myText
-    show(thirdViewController, sender: nil)
+//    show(thirdViewController, sender: nil)
+    navigationController?.pushViewController(thirdViewController, animated: true)
   }
   
 }

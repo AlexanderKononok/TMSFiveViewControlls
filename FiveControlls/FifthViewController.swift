@@ -22,10 +22,11 @@ class FifthViewController: UIViewController {
   }
   
   @IBAction func showFirstViewControllerButtonPressed(_ sender: Any) {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let firstViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self)) as! ViewController
-    firstViewController.modalPresentationStyle = .fullScreen
-    self.present(firstViewController, animated: true)
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    let firstViewController = storyboard.instantiateViewController(identifier: String(describing: ViewController.self)) as! ViewController
+//    firstViewController.modalPresentationStyle = .fullScreen
+//    self.present(firstViewController, animated: true)
+    navigationController?.popToRootViewController(animated: true)
   }
   
 }

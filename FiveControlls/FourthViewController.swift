@@ -25,11 +25,12 @@ class FourthViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let fifthViewController = storyboard.instantiateViewController(identifier: String(describing: FifthViewController.self)) as! FifthViewController
     
-    fifthViewController.modalPresentationStyle = .fullScreen
-    self.present(fifthViewController, animated: true)
+//    fifthViewController.modalPresentationStyle = .fullScreen
+//    self.present(fifthViewController, animated: true)
     
     fifthViewController.myText = myText
-    show(fifthViewController, sender: nil)
+//    show(fifthViewController, sender: nil)
+    navigationController?.pushViewController(fifthViewController, animated: true)
   }
   
 }

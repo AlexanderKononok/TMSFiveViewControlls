@@ -25,11 +25,12 @@ class ThirdViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let fourthViewController = storyboard.instantiateViewController(identifier: String(describing: FourthViewController.self)) as! FourthViewController
     
-    fourthViewController.modalPresentationStyle = .fullScreen
-    self.present(fourthViewController, animated: true)
+//    fourthViewController.modalPresentationStyle = .fullScreen
+//    self.present(fourthViewController, animated: true)
     
     fourthViewController.myText = myText
-    show(fourthViewController, sender: nil)
+//    show(fourthViewController, sender: nil)
+    navigationController?.pushViewController(fourthViewController, animated: true)
   }
   
 }
