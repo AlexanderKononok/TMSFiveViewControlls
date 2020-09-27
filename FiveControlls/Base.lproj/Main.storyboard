@@ -216,6 +216,9 @@
                                 <state key="normal" title="Show first controller">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showFirstViewControllerButtonPressed:" destination="Kld-0U-jVv" eventType="touchUpInside" id="lu9-Tb-hto"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t2u-3X-z2V"/>
