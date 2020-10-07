@@ -11,7 +11,7 @@ class FifthViewController: UIViewController {
   
   @IBOutlet weak var inputTextField: UILabel!
   
-  var myText = ""
+  var myText: String? = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -11,7 +11,7 @@ class FourthViewController: UIViewController {
   
   @IBOutlet weak var inputTextField: UILabel!
   
-  var myText = ""
+  var myText: String? = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,14 +23,14 @@ class FourthViewController: UIViewController {
   
   @IBAction func showNextViewControllerButtonPressed(_ sender: Any) {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let fifthViewController = storyboard.instantiateViewController(identifier: String(describing: FifthViewController.self)) as! FifthViewController
+    let fifthViewController = storyboard.instantiateViewController(identifier: String(describing: FifthViewController.self)) as? FifthViewController
     
 //    fifthViewController.modalPresentationStyle = .fullScreen
 //    self.present(fifthViewController, animated: true)
     
-    fifthViewController.myText = myText
+    fifthViewController?.myText = myText
 //    show(fifthViewController, sender: nil)
-    navigationController?.pushViewController(fifthViewController, animated: true)
+    navigationController?.pushViewController(fifthViewController ?? UIViewController(), animated: true)
   }
   
 }

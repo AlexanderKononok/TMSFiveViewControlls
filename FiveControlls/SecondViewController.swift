@@ -11,7 +11,7 @@ class SecondViewController: UIViewController {
   
   @IBOutlet weak var inputTextField: UILabel!
   
-  var myText = ""
+  var myText: String? = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,14 +23,14 @@ class SecondViewController: UIViewController {
   
   @IBAction func showNextViewControllerButtonPressed(_ sender: Any) {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let thirdViewController = storyboard.instantiateViewController(identifier: String(describing: ThirdViewController.self)) as! ThirdViewController
+    let thirdViewController = storyboard.instantiateViewController(identifier: String(describing: ThirdViewController.self)) as? ThirdViewController
     
 //    thirdViewController.modalPresentationStyle = .fullScreen
 //    self.present(thirdViewController, animated: true)
     
-    thirdViewController.myText = myText
+    thirdViewController?.myText = myText
 //    show(thirdViewController, sender: nil)
-    navigationController?.pushViewController(thirdViewController, animated: true)
+    navigationController?.pushViewController(thirdViewController ?? UIViewController(), animated: true)
   }
   
 }
